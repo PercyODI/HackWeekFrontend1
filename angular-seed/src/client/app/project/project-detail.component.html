@@ -1,0 +1,9 @@
+<div *ngIf="project">
+  <h2>{{project.name}}</h2>
+  <ul *ngIf="project.people_on_project">
+    <li *ngFor="let person of project.people_on_project">
+      {{person.first_name}} {{person.last_name}}
+    </li>
+  </ul>
+  <button (click)="goBack()">Back</button>
+</div>
